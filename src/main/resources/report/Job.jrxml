@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Job" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="b0c61d57-5093-476b-8d97-9f435edb684c">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<field name="jobId" class="java.lang.String"/>
+	<field name="jobTitle" class="java.lang.String"/>
+	<field name="maxSalary" class="java.lang.Integer"/>
+	<field name="minSalary" class="java.lang.Integer"/>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="271" height="47" uuid="699de41c-bffc-4546-adb6-5331f72b546b"/>
+				<text><![CDATA[Job List]]></text>
+			</staticText>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="23" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="113" height="20" uuid="36c1bef8-5bab-4307-8f6c-b65fe2f252e8"/>
+				<text><![CDATA[Job Id	]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="407" y="0" width="150" height="20" uuid="c9459195-f134-423d-8d83-11b395a8220c"/>
+				<text><![CDATA[Max Salary]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="257" y="0" width="150" height="20" uuid="f344e7c0-3c6b-4178-aa43-5491dbd0c1f7"/>
+				<text><![CDATA[Min Salary]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="113" y="0" width="144" height="20" uuid="3bb735dd-3d39-4ba3-ae8c-1a12a0c96af8"/>
+				<text><![CDATA[Job Title]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="22" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="2" width="113" height="20" uuid="37b205e4-586a-4b5b-a4a8-fd1bc0877ad6"/>
+				<textFieldExpression><![CDATA[$F{jobId}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="113" y="2" width="144" height="20" uuid="203d7068-0352-454e-9e1f-322b1fca7dca"/>
+				<textFieldExpression><![CDATA[$F{jobTitle}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="407" y="2" width="148" height="20" uuid="865dcf4e-6f7d-42ae-9c94-b9477d5a36fa"/>
+				<textFieldExpression><![CDATA[$F{maxSalary}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="257" y="2" width="150" height="20" uuid="bca208c3-b8d2-4352-a467-8a9cb89c5f9d"/>
+				<textFieldExpression><![CDATA[$F{minSalary}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      xmlns:th="http://www.thymeleaf.org"
+      layout:decorator="fragments/layout">
+<body>
+<div layout:fragment="content" th:remove="tag">
+    <form method="post" action="/import" enctype="multipart/form-data">
+        <div class="form-group">
+            <label>File/Document</label>
+            <div>
+                <input class="form-control" type="file" name="fileAttachment" />
+            </div>
+        </div>
+
+        <input type="submit" value="Import"  class="btn btn-primary"/>
+    </form>
+</div>
+</body>
+</html>

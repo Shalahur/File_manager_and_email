@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      xmlns:th="http://www.thymeleaf.org"
+      layout:decorator="fragments/layout">
+<head>
+    <title>Generate and Email</title>
+</head>
+<body>
+<div layout:fragment="content" th:remove="tag">
+    <form method="post" action="/export">
+        <div>
+            <label>File type</label>
+            <div>
+                <input type="checkbox" name="excel"/>
+                <span>Excel</span>
+            </div>
+            <div>
+                <input type="checkbox" name="csv"/>
+                <span>CSV</span>
+            </div>
+            <div>
+                <input type="checkbox" name="pdf"/>
+                <span>Pdf</span>
+            </div>
+        </div>
+
+        <input type="submit" value="Generate and Email" class="btn btn-primary"/>
+    </form>
+</div>
+</body>
+</html>
